@@ -1,5 +1,5 @@
 # fits-to-parquet-converter
-This Python script converts .fits files to .parquet files using the astropy and pandas libraries. The resulting .parquet files are compressed and can be read faster than uncompressed .fits files.
+This Python script converts .fits and .fit files to .parquet files using the astropy and pandas libraries. The resulting .parquet files are compressed and can be read faster than uncompressed .fits files.
 
 Installation
 To use this script, you will need to have Python 3.7 or higher installed. You will also need to install the following libraries:
