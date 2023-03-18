@@ -9,15 +9,24 @@ astropy
 pandas
 You can install these libraries using pip. Open a terminal or command prompt and type the following commands:
 
-Copy code
 pip install astropy
 pip install pandas
+pip install git+https://github.com/BrunoArsioli/fits-to-parquet.py.git
+#Import my gitbhu libraries
+from fits_to_parquet.fits_to_parquet import fits_to_parquet
+
+Or, in Google Colab
+!pip install astropy
+!pip install pandas
+#Import the fits_to_parquet gitbhu libraries
+!pip install git+https://github.com/BrunoArsioli/fits-to-parquet.py.git
+
+
 Usage
 To use this script, simply call the fits_to_parquet function and pass in the path to the .fits file:
 
 python
-Copy code
-from my_code import fits_to_parquet
+from fits_to_parquet.fits_to_parquet import fits_to_parquet
 
 # convert a .fits file to a .parquet file
 fits_to_parquet('path/to/fits/file.fits')
