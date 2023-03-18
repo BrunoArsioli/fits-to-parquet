@@ -7,11 +7,12 @@ Original file is located at
     https://colab.research.google.com/drive/1FDpcWxa9fnMD0ZPoAylcWtnA7yWcRKU2
 
 In case you work in google.colab, run the following cell first:
+
+>>>#Allow google.colab to access files in your drive
+>>>from google.colab import drive
+>>>drive.mount('/content/drive', force_remount=True)
 """
 
-#Allow google.colab to access files in your drive
-from google.colab import drive
-drive.mount('/content/drive', force_remount=True)
 
 # import libraries
 import os
