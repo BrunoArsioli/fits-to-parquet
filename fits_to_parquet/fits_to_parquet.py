@@ -21,6 +21,7 @@ def fits_to_parquet(fits_path):
         raise ValueError("Input file does not exist")
     else:
         #do nothing
+        a = 1
 
     # read .fits file 
     try:
