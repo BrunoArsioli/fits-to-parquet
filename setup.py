@@ -5,7 +5,7 @@ setup(
     version='1.0',
     packages=['fits_to_parquet'],
     install_requires=[
-        'os'
+        'os',
         'pandas',
         'astropy'
     ],
