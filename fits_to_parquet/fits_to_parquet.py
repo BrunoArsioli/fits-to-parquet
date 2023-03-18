@@ -19,7 +19,8 @@ def fits_to_parquet(fits_path):
     # Check that the input file exists 
     if not os.path.isfile(fits_path):
         raise ValueError("Input file does not exist")
-
+    else:
+        #do nothing
 
     # read .fits file 
     try:
