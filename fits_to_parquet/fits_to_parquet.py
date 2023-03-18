@@ -16,6 +16,10 @@ def fits_to_parquet(fits_path):
         Path to the parquet file.
     """
     
+    # Check that the input file exists 
+    if not os.path.isfile(fits_path):
+        raise ValueError("Input file does not exist")    
+    
     # read .fits file 
     try:
         data = Table.read(f"{fits_path}")
