@@ -31,9 +31,9 @@ def fits_to_parquet(fits_path):
         raise ValueError('Input file has wrong extension. Must be .fits or .fit')
 
     # Decode byte strings in the DataFrame
-    for col in datadf.columns:
-        if datadf[col].dtype == object and datadf[col].str.startswith("b'").any():
-            datadf[col] = datadf[col].str.decode('utf-8')
+    for col in data.columns:
+        if data[col].dtype == object and data[col].str.startswith("b'").any():
+            data[col] = data[col].str.decode('utf-8')
     
     # .fits to pandas dataframe
     datadf = data.to_pandas()
