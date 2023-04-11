@@ -29,15 +29,17 @@ def fits_to_parquet(fits_path):
     # help user deal with exception in case input file is not .fits neither .fit file.
     if not fits_path.endswith('.fits') and not fits_path.endswith('.fit'):
         raise ValueError('Input file has wrong extension. Must be .fits or .fit')
+        
+    # Define function to decode byte strings in the DataFrame
+    def decode_bytes(value):
+        return value.decode('utf-8') if isinstance(value, bytes) else value
 
-    # Decode byte strings in the DataFrame
-    for col in data.columns:
-        if data[col].dtype == object and data[col].str.startswith("b'").any():
-            data[col] = data[col].str.decode('utf-8')
-    
     # .fits to pandas dataframe
     datadf = data.to_pandas()
 
+    # decode byte columns 
+    datadf = datadf.applymap(decode_bytes)    
+        
     # remove extention from fits_path
     if fits_path.endswith('.fits'):
         parquet_path = fits_path.replace(".fits", ".parquet")
