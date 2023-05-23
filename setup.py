@@ -4,6 +4,8 @@ setup(
     name='fits-to-parquet',
     version='1.0',
     packages=['fits_to_parquet'],
+    author='Bruno Arsioli',
+    author_email='bruno.arsioli@proton.me',
     install_requires=[
         'pandas',
         'astropy'
