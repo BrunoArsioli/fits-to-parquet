@@ -13,7 +13,7 @@ You can install these libraries using pip. Open a terminal or command prompt and
 ```
 pip install astropy
 pip install pandas
-pip install git+https://github.com/BrunoArsioli/fits-to-parquet.py.git
+pip install git+https://github.com/BrunoArsioli/fits-to-parquet.git
 #Import my gitbhu libraries
 from fits_to_parquet.fits_to_parquet import fits_to_parquet
 ```
@@ -23,7 +23,7 @@ Or, in Google Colab
 !pip install astropy
 !pip install pandas
 #Import the fits_to_parquet gitbhu libraries
-!pip install git+https://github.com/BrunoArsioli/fits-to-parquet.py.git
+!pip install git+https://github.com/BrunoArsioli/fits-to-parquet.git
 ```
 
 Usage
